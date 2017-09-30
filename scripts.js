@@ -1,13 +1,24 @@
-let tipCalculator;
-tipCalculator = function(total, tipRate){
-  // step 1:
-  let tipAmount;
-  tipAmount = tipRate * total;
-  // and step 2:
-  $("#response").html("Your tip is $" + tipAmount);
-}
-
-// Now call (or “execute”) the function, passing a
-// total of $50.00 and a tipRate of 20%:
-
-tipCalculator(50.00, 0.2);
+let myHabaneroSauceSquirts, myBurritoObject;
+// First, define and assign a variable for how
+// spicy the burrito is.
+myHabaneroSauceSquirts = 3;
+// Now assign the burrito object.
+myBurritoObject = {
+  tortilla: "wheat",
+  guacamole: true,
+  beans: "pinto",
+  // Make use of the variable above.
+  habaneroSauceSquirts: myHabaneroSauceSquirts,
+  // Use the variable again in a function.
+  spiciness: function(){
+    if (myHabaneroSauceSquirts > 0 ){
+      alert("This is a spicy burrito!");
+    } else {
+      alert("This is a mild burrito.");
+    }
+  }
+};
+$("#response").html("Your burrito has " +
+  myBurritoObject.habaneroSauceSquirts +
+  " squirts of habanero.");
+myBurritoObject.spiciness();
