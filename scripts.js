@@ -1,5 +1,8 @@
-var arrayExample = [1,2,3,"four"]
-function theLastOne(arr) {
-   return arr[arr.length - 1];
-}
-alert(theLastOne([1,2,3,"four"]))
+let turtlesWithSplinter, turtlesWithoutSplinter, reversedTurtlesWithoutSplinter;
+turtlesWithSplinter = ["Leonardo", "Donatello", "Raphael", "Michelangelo", "Splinter"];
+// oops. let's pop() Splinter off before reversing…
+turtlesWithoutSplinter = turtlesWithSplinter.pop();
+console.log(turtlesWithoutSplinter);
+//--> Splinter
+//reversedTurtlesWithoutSplinter = turtlesWithSplinter.pop().reverse();
+//$("#response").html(reversedTurtlesWithoutSplinter);;
