@@ -7,18 +7,22 @@ line1 = [{text: "Whan", modern: "When"}, {text: "that"}, {text: "Aprill,",
 // Create a blank string that opens two tags.
 line1Text = "<blockquote><p>";
 line1.forEach(function(word){
-  // Define a variable that will be the entirety of a single
-  // word-sized chunk of information.
   let wordString;
   wordString = word.text;
-  // Test to see if the .modern property exists.
   if (word.modern){
-    // If it does, surround wordString in an <a> tag.
-    wordString = "<a href='#'>" + wordString + "</a>";
+    // Add word.modern as a data attribute to the <a> tag.
+    wordString = "<a href='#' data-modern='" + word.modern + "'>" + wordString + "</a>";
   }
-  // Add wordString plus a space to the line1Text.
   line1Text = line1Text + wordString + " ";
 });
 // Break the line and close the two tags.
 line1Text = line1Text + "<br />(line 2 would go here)</p></blockquote>";
 $("#prologue").html(line1Text);
+$("#prologue a").click(function(){
+  let glossText, clickedWord, modernWord;
+  clickedWord = $( this ).text();
+  // .data("modern") looks for the data-modern HTML attribute.
+  modernWord = $( this ).data("modern");
+  glossText = "<h2>You clicked on " + clickedWord + ", which means " + modernWord +"</h2>";
+  $("#glosses").html(glossText);
+});
