@@ -25,3 +25,10 @@ tenThousandthPolygon = L.polygon(tenThousandth, {
                                       [washingtonSquarePark.lat - 0.001, washingtonSquarePark.lng + 0.001]];
                         thousandthPolyline = L.polyline(thousandth, {color: "#d33682"}
                                               ).addTo(firstMap);
+                                              let circle;
+                                              circle = L.circle(washingtonSquarePark, {radius: 100,
+                                                                                       color: "#859900",
+                                                                                       fillColor: "#cb4b16",
+                                                                                       opacity: 0.9,
+                                                                                       fillOpacity: 0.25}
+                                                        ).addTo(firstMap);
