@@ -9,6 +9,7 @@ tileLayer =
   tileLayer.addTo(firstMap);
   firstMap.setView([40.730833, -73.9975], 16);
 let bobstLibrary;
-bobstLibrary = L.marker([40.729444, -73.997222]);
+var obj = JSON.parse('{ "name":"John", "age":30, "lat":"40.729444", "long":-73.997222"}');
+bobstLibrary = L.marker([obj.lat, obj.long]);
 bobstLibrary.addTo(firstMap);
 bobstLibrary.bindPopup("This is Bobst Library.");
