@@ -117,7 +117,7 @@ let md;
 md = window.markdownit({html: true}).use(window.markdownitFootnote);
 // Load the Markdown file with jQuery.
 $.ajax({
-  url: "https://github.com/vanessa-lu/javascripting-english-major-project/blob/master/final-project.md",
+  url: "https://vanessa-lu.github.io/javascripting-english-major-project//final-project.md",
   success: function(markdown){
     // Convert the Markdown to HTML.
     let html;
