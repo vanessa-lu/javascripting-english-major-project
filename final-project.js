@@ -111,3 +111,18 @@ data = {
   map.fitBounds(couldBeLayer.getBounds());
   // Zoom out one level to give some padding.
   map.zoomOut(1);
+
+  // Define and assign a Markdown-it renderer.
+let md;
+md = window.markdownit({html: true}).use(window.markdownitFootnote);
+// Load the Markdown file with jQuery.
+$.ajax({
+  url: "https://vanessa-lu.github.io/javascripting-english-major-project/introduction.md",
+  success: function(markdown){
+    // Convert the Markdown to HTML.
+    let html;
+    html = md.render(markdown);
+    // Print the HTML to #content using jQuery.
+    $("#content").html(html);
+  }
+});
