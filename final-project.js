@@ -121,12 +121,17 @@ data = {
     // Create a variable tab that has the name as a string.
     $.ajax({
       // tab + ".md" yields, for example, "rampart.md".
-      url: tab + ".md",
+      url: "Upper_West_Side.md",
       success: function(markdown){
         let html;
         html = md.render(markdown);
         // "#rampart", for example.
-        $("#" + tab).html(html);
+        $("#Upper_West_Side" + tab).html(html);
       }
     });
   });
+  let placesArray;
+   placesArray = [
+     {text: "Hastings Street", tab: "hastings-street", html: "Hastings Street"},
+     {text: "18th & Vine", tab: "eighteenth-and-vine", html: "18th &amp; Vine"},
+]
