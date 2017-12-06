@@ -1,1 +1,1 @@
-Columbus is located in Ohio
+Columbus 
