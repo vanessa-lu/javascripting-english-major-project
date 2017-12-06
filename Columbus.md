@@ -1,1 +1,1 @@
-this is text for columbus
+Columbus is located in Ohio
