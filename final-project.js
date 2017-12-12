@@ -56,7 +56,7 @@ data = {
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ 40.72606,-73.978595 ]
+       "coordinates":  [-73.978595, 40.72606]
     },
     "properties": {
     "name":"Pitt Street",
@@ -76,6 +76,19 @@ data = {
     "tab": "Columbia_University",
     "linkText": "Columbia",
     "wikipedia":"https://en.wikipedia.org/wiki/Columbia_University"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.99770319999999, 40.7358437 ]
+    },
+    "properties": {
+    "name":"Greenwich Village",
+    "tab": "Twelve_sixth",
+    "linkText": "Greenwich Village",
+    "wikipedia":"https://en.wikipedia.org/wiki/Greenwich_Village"
     }
   },
   {
@@ -135,13 +148,14 @@ let placesArray;
    {text: "Dansville", tab: "Dansville", html: "Dansville"},
    {text: "Pitt Street", tab: "Pitt_Street", html: "Pitt Street"},
    {text: "Upper West Side", tab: "Upper_West_Side", html: "Upper West Side"},
-   {text: "Watertown", tab: "Watertown", html: "Watertown"}
+   {text: "Watertown", tab: "Watertown", html: "Watertown"},
+   {text: "Greenwich Village", tab: "Twelve_sixth", html: "Greenwich Village"}
 ];
 let md;
 md = window.markdownit({html: true}).use(window.markdownitFootnote);
 ["Upper_West_Side", "Columbus",
     "Columbia_University", "Pitt_Street",
-    "Dansville", "Watertown"].forEach(function(tab){
+    "Dansville", "Watertown", "Twelve_sixth"].forEach(function(tab){
   // Create a variable tab that has the name as a string.
   $.ajax({
     url: "https://vanessa-lu.github.io/javascripting-english-major-project/" + tab + ".md",
