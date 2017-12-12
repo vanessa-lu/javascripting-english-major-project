@@ -56,12 +56,13 @@ data = {
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ 151.209444,-33.865 ]
+       "coordinates":  [ 40.72606,-73.978595 ]
     },
     "properties": {
-    "name":"Sydney Austrailia",
-    "tab": "Sydney",
-    "wikipedia":"https://en.wikipedia.org/wiki/Sydney"
+    "name":"Pitt Street",
+    "tab": "Pitt_Street",
+    "linkText": "Pitt Street",
+    "wikipedia":"https://en.wikipedia.org/wiki/Alphabet_City,_Manhattan"
     }
   },
   {
@@ -73,6 +74,7 @@ data = {
     "properties": {
     "name":"Columbia University",
     "tab": "Columbia_University",
+    "linkText": "Columbia",
     "wikipedia":"https://en.wikipedia.org/wiki/Columbia_University"
     }
   },
@@ -85,6 +87,7 @@ data = {
     "properties": {
       "name":"Watertown, NY",
       "tab": "Watertown",
+      "linkText": "Watertown",
       "wikipedia":"https://en.wikipedia.org/wiki/Watertown_(city),_New_York"
     }
   }
@@ -100,6 +103,7 @@ couldBeFeatures = data.features.map(function(feature){
     html: feature.properties.html,
     tab: feature.properties.tab,
     wikipedia: feature.properties.wikipedia,
+    linkText: feature.properties.linkText,
     // Create an L.latLng object out of the GeoJSON coordinates.
     // Remember that in GeoJSON, the coordinates are reversed
     // (longitude, then latitude).
@@ -122,8 +126,6 @@ popupContent = popupContent + "Read about " + feature.name + " on <a href='"+ fe
 couldBeLayer.addTo(map);
 // Redraw the map so that all the markers are visible.
 map.fitBounds(couldBeLayer.getBounds());
-// Zoom out one level to give some padding.
-map.zoomOut(1);
 
 // Define and assign a Markdown-it renderer.
 let placesArray;
@@ -131,14 +133,14 @@ let placesArray;
    {text: "Columbus", tab: "Columbus", html: "Columbus"},
    {text: "Columbia University", tab: "Columbia_University", html: "Columbia University"},
    {text: "Dansville", tab: "Dansville", html: "Dansville"},
-   {text: "Sydney", tab: "Sydney", html: "Sydney"},
+   {text: "Pitt Street", tab: "Pitt_Street", html: "Pitt Street"},
    {text: "Upper West Side", tab: "Upper_West_Side", html: "Upper West Side"},
    {text: "Watertown", tab: "Watertown", html: "Watertown"}
 ];
 let md;
 md = window.markdownit({html: true}).use(window.markdownitFootnote);
 ["Upper_West_Side", "Columbus",
-    "Columbia_University", "Sydney",
+    "Columbia_University", "Pitt_Street",
     "Dansville", "Watertown"].forEach(function(tab){
   // Create a variable tab that has the name as a string.
   $.ajax({
@@ -170,15 +172,16 @@ md = window.markdownit({html: true}).use(window.markdownitFootnote);
           return oldHtml.replace(regex, newHtml);
         });
       });
+      $("#" + tab + " a").click(function(){
+        let target, lat, lng;
+        target = $( this ).data("tab");
+        $("#nav-tabs a[href='#" + target + "']").tab("show");
+        lat = $( this ).data("lat");
+        lng = $( this ).data("lng");
+        map.flyTo([lat, lng], 12);
+      });
     }
   });
-  $("#" + tab + " a").click(function(){
-    let target, lat, lng;
-    target = $( this ).data("tab");
-    $("#nav-tabs a[href='#" + target + "']").tab("show");
-    lat = $( this ).data("lat");
-    lng = $( this ).data("lng");
-    map.panTo([lat, lng]);
-  });
+
   //$("#tabs-nav a[href='#" + $( this ).data("tab") + "']").tab("show");
 });
