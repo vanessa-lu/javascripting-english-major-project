@@ -72,9 +72,9 @@ data = {
        "coordinates":  [ -74.0125,40.711667 ]
     },
     "properties": {
-    "name":"Twin Towers",
+    "name":"World Trade Center",
     "tab": "World-Trade",
-    "linkText": "Twin Towers",
+    "linkText": "World Trade Center",
     "wikipedia":"https://en.wikipedia.org/wiki/World_Trade_Center_(1973%E2%80%932001)"
     }
   },
@@ -128,7 +128,7 @@ couldBeFeatures = data.features.map(function(feature){
 couldBeLayer = L.featureGroup(couldBeFeatures.map(function(feature){
   let popupContent;
   popupContent = "<h4>" + feature.name + "</h4>";
-popupContent = popupContent + "Read about " + feature.name + " on <a href='"+ feature.wikipedia + "'>Wikipedia</a>.";
+popupContent = popupContent + "Cool Place! Read about " + feature.name + " on <a href='"+ feature.wikipedia + "'>Wikipedia</a>.";
   return L.circleMarker(feature.latLng, {
     radius: 5,
     color: "#d33682",
@@ -144,7 +144,7 @@ map.fitBounds(couldBeLayer.getBounds());
 let placesArray;
  placesArray = [
    {text: "Columbus", tab: "Columbus", html: "Columbus"},
-   {text: "Twin Towers", tab: "World-Trade", html: "Twin Towers"},
+   {text: "World Trade Center", tab: "World-Trade", html: "World Trade Center"},
    {text: "Dansville", tab: "Dansville", html: "Dansville"},
    {text: "Pitt Street", tab: "Pitt_Street", html: "Pitt Street"},
    {text: "Upper West Side", tab: "Upper_West_Side", html: "Upper West Side"},
