@@ -95,6 +95,19 @@ data = {
     "type": "Feature",
     "geometry": {
        "type": "Point",
+       "coordinates":  [ -74.002222, 40.745278 ]
+    },
+    "properties": {
+    "name":"Chelsea",
+    "tab": "Chelsea",
+    "linkText": "Chelsea",
+    "wikipedia":"https://en.wikipedia.org/wiki/Chelsea,_Manhattan"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
        "coordinates":  [ -75.906389,43.975556 ]
     },
     "properties": {
