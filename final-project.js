@@ -69,13 +69,13 @@ data = {
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -73.961944,40.8075 ]
+       "coordinates":  [ -74.0125,40.711667 ]
     },
     "properties": {
-    "name":"Columbia University",
-    "tab": "Columbia_University",
-    "linkText": "Columbia",
-    "wikipedia":"https://en.wikipedia.org/wiki/Columbia_University"
+    "name":"Twin Towers",
+    "tab": "World-Trade",
+    "linkText": "Twin Towers",
+    "wikipedia":"https://en.wikipedia.org/wiki/World_Trade_Center_(1973%E2%80%932001)"
     }
   },
   {
@@ -144,7 +144,7 @@ map.fitBounds(couldBeLayer.getBounds());
 let placesArray;
  placesArray = [
    {text: "Columbus", tab: "Columbus", html: "Columbus"},
-   {text: "Columbia University", tab: "Columbia_University", html: "Columbia University"},
+   {text: "Twin Towers", tab: "World-Trade", html: "Twin Towers"},
    {text: "Dansville", tab: "Dansville", html: "Dansville"},
    {text: "Pitt Street", tab: "Pitt_Street", html: "Pitt Street"},
    {text: "Upper West Side", tab: "Upper_West_Side", html: "Upper West Side"},
@@ -154,7 +154,7 @@ let placesArray;
 let md;
 md = window.markdownit({html: true}).use(window.markdownitFootnote);
 ["Upper_West_Side", "Columbus",
-    "Columbia_University", "Pitt_Street",
+    "World-Trade", "Pitt_Street",
     "Dansville", "Watertown", "Twelve_sixth"].forEach(function(tab){
   // Create a variable tab that has the name as a string.
   $.ajax({
