@@ -141,7 +141,7 @@ couldBeFeatures = data.features.map(function(feature){
 couldBeLayer = L.featureGroup(couldBeFeatures.map(function(feature){
   let popupContent;
   popupContent = "<h4>" + feature.name + "</h4>";
-popupContent = popupContent + "Cool Place! Read about " + feature.name + " on <a href='"+ feature.wikipedia + "'>Wikipedia</a>.";
+popupContent = popupContent + "Read about " + feature.name + " on <a href='"+ feature.wikipedia + "'>Wikipedia</a>.";
   return L.circleMarker(feature.latLng, {
     radius: 5,
     color: "#d33682",
@@ -162,13 +162,14 @@ let placesArray;
    {text: "Pitt Street", tab: "Pitt_Street", html: "Pitt Street"},
    {text: "Upper West Side", tab: "Upper_West_Side", html: "Upper West Side"},
    {text: "Watertown", tab: "Watertown", html: "Watertown"},
+   {text: "Chelsea", tab: "Chelsea", html: "Chelsea"},
    {text: "Greenwich Village", tab: "Twelve_sixth", html: "Greenwich Village"}
 ];
 let md;
 md = window.markdownit({html: true}).use(window.markdownitFootnote);
 ["Upper_West_Side", "Columbus",
     "World-Trade", "Pitt_Street",
-    "Dansville", "Watertown", "Twelve_sixth"].forEach(function(tab){
+    "Dansville", "Watertown", "Chelsea", "Twelve_sixth"].forEach(function(tab){
   // Create a variable tab that has the name as a string.
   $.ajax({
     url: "https://vanessa-lu.github.io/javascripting-english-major-project/" + tab + ".md",
