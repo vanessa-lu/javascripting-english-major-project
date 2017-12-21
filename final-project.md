@@ -7,3 +7,4 @@ Throughout the novel, locations of upbringing and current living are mentioned, 
 ![Imgur](https://i.imgur.com/XR8zQsS.gif)
 
 In this project, I will...
+![Imgur](https://i.imgur.com/w3tAFup.jpg)
