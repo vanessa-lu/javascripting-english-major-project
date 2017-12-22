@@ -11,6 +11,9 @@ p {
 .fourth-paragraph {
   color: #ff6666;
 }
+.fifth-paragraph {
+  color: #0099ff;
+}
 @import url("https://fonts.googleapis.com/css?family=Garamond");
 body {
   font-family: "EB Garamond", serif;
