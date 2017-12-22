@@ -8,3 +8,13 @@ p {
 #third-paragraph {
   color: #d33682;
 }
+@import url("https://fonts.googleapis.com/css?family=Garamond");
+body {
+  font-family: "EB Garamond", serif;
+}
+.leaflet-container {
+  font-family: "EB Garamond", serif;
+}
+body, .leaflet-popup-content-wrapper, .leaflet-popup-tip {
+  background-color: #fdf6e3;
+}
