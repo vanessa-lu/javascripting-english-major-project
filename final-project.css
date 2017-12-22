@@ -12,9 +12,6 @@ p {
 body {
   font-family: "EB Garamond", serif;
 }
-.leaflet-container {
-  font-family: "EB Garamond", serif;
-}
-body, .leaflet-popup-content-wrapper, .leaflet-popup-tip {
+body {
   background-color: #fdf6e3;
 }
