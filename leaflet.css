@@ -1,6 +1,6 @@
 p {
   color: #657b83;
-    background-color: #fdf6e3;
+    background-color: #ffe6f0;
 }
 .second-paragraph {
   color: #b58900;
@@ -8,12 +8,15 @@ p {
 #third-paragraph {
   color: #d33682;
 }
-@import url("https://fonts.googleapis.com/css?family=Garamond");
+.fourth-paragraph {
+  color: #ff6666;
+}
+@import url('https://fonts.googleapis.com/css?family=Alegreya');
 body {
-  font-family: "EB Garamond", serif;
+  font-family: 'Alegreya', serif;
 }
 body {
-  background-color: #fdf6e3;
+  background-color: #ffe6f0;
 }
 .map {
   height: 400px;
