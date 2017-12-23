@@ -1,4 +1,4 @@
-Julius Clarke is a critic for *The Village Voice*. Along with his literary work, he works other temporary jobs to help sustain himself. Through one of his temporary jobs, he meets David Cohen, who soon becomes his lover. Eventually, Julius moves in with David, who often calls Julius demeaning names and treats him as his housewife.
+Julius Clarke is a critic for *The Village Voice*. Along with his literary work, he works other temporary jobs to help sustain himself. Through one of his temporary jobs, he meets David Cohen, who soon becomes his lover. Eventually, Julius moves into David's apartment in Chelsea.
 
 Julius resides in Pitt Street, which is located in Alphabet City. While living with David, Julius decides to sublease his apartment to Bootie. For Bootie, Julius' minimalistic and dirty apartment serves as a place of solace from Thwaite's grandiose apartment in the Upper West Side. 
 
